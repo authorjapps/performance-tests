@@ -9,13 +9,16 @@ import org.jsmart.zerocode.samples.tests.put.PutCorpLoanServiceTest;
 import org.junit.runner.RunWith;
 
 /**
- * Each test mapping here is equivalent to one user, that means there are 3 concurrent users below
- * invoking their respective user operations as:
- *         User-1)POST,GET
- *         User-2)PUT,GET
- *         User-3)GET
+ * What's new in ZeroCodeMultiLoadRunner.class ?
+ * ---------------------------------------------
+ * While running with "ZeroCodeMultiLoadRunner.class", each test mapping here is equivalent to one user,
+ * that means there are 3 concurrent users below invoking their respective user operations as:
+ *         User-1) POST,GET
+ *         User-2) PUT,GET
+ *         User-3) GET
+ *         User-N) so on
  *
- * Note -
+ * Note :
  * ------
  * All 3 users are running in parallel which resembles the production like scenario where each user
  * doing different jobs.
