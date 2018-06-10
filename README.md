@@ -60,6 +60,7 @@ Where the `get_screening_details_by_custid.json` with payload and assertions :
     ]
 }
 ```
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
 
 Combining single loads(GET, POST, PUT etc)
 ===
@@ -80,6 +81,7 @@ public class LoadTestSuite {
 
 }
 ```
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
 
 Multi scenario parallel load
 ===
@@ -115,6 +117,7 @@ public class LoadMultipleGetPostPutTest {
 
 }
 ```
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
 
 #### (Optionally)Grouping the multiload tests
 You can(optionally) group the `@TestMapping`s as below for better readability and pretty looking too.
@@ -129,6 +132,7 @@ You can(optionally) group the `@TestMapping`s as below for better readability an
 public class LoadMultipleGroupAnnotationTest {
 }
 ```
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
 
 Load with gradually increasing or decreasing
 ===
@@ -147,3 +151,4 @@ public class LoadGraduallyTestSuite {
 
 }
 ```
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
