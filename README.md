@@ -116,6 +116,20 @@ public class LoadMultipleGetPostPutTest {
 }
 ```
 
+#### (Optionally)Grouping the multiload tests
+You can(optionally) group the `@TestMapping`s as below for better readability and pretty looking too.
+```java
+@LoadWith("load_generation.properties")
+@TestMappings({
+        @TestMapping(testClass = GetScreeningServiceTest.class, testMethod = "testGetScreeningLocalAndGlobal"),
+        @TestMapping(testClass = PostCorpLoanServiceTest.class, testMethod = "testPostNewLoan_crudOperations"),
+        @TestMapping(testClass = PutCorpLoanServiceTest.class, testMethod = "testPutAmendExistingLoan")
+})
+@RunWith(ZeroCodeMultiLoadRunner.class)
+public class LoadMultipleGroupAnnotationTest {
+}
+```
+
 Load with gradually increasing or decreasing
 ===
 
