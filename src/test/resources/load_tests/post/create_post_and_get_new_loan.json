@@ -1,0 +1,60 @@
+{
+    "scenarioName": "Corp Loan API- Create and Get Details Test",
+    "steps": [
+        {
+            "name": "create_approved_loan",
+            "url": "/api/v1/corp-loan/companies/ABC-Jewels",
+            "operation": "POST",
+            "request": {
+                "body":{
+                    "amountApplied": 100000,
+                    "amountSanctioned": 90000,
+                    "currency": "USD",
+                    "dateSanctioned":"2018-05-31"
+                }
+            },
+            "assertions": {
+                "status": 201,
+                "body": {
+                    "id" : "LOANCORPABCJ-20180531"
+                }
+            }
+        },
+        {
+            "name": "get_loan_details",
+            "url": "/api/v1/corp-loan/ids/LOANCORPABCJ-20180531",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body":{
+                    "id" : "LOANCORPABCJ-20180531",
+                    "amountApplied": 100000,
+                    "amountSanctioned": 90000,
+                    "currency": "USD",
+                    "dateSanctioned":"2018-05-31"
+                }
+            }
+        },
+        {
+            "name": "get_loan_details_without_hard_coding",
+            "url": "/api/v1/corp-loan/ids/${$.create_approved_loan.response.body.id}",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body":{
+                    "id" : "${$.create_approved_loan.response.body.id}",
+                    "currency": "${$.create_approved_loan.request.body.currency}",
+                    "dateSanctioned":"${$.create_approved_loan.request.body.dateSanctioned}",
+                    "amountApplied": "$EQ.${$.create_approved_loan.request.body.amountApplied}",
+                    "amountSanctioned": "$EQ.${$.create_approved_loan.request.body.amountSanctioned}"
+                }
+            }
+        }
+
+
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "scenarioName": "Screening API- Get Screening by customerId test",
+    "steps": [
+        {
+            "name": "get_screening_details",
+            "url": "/api/v1/screening/cust-ids/SINGAHV3033",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "id" : "SINGAHV3033",
+                    "localScreeningStatus" : "Green",
+                    "globalScreeningStatus" : "Red"
+                }
+            }
+        }
+
+    ]
+}

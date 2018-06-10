@@ -1,0 +1,87 @@
+{
+    "name": "Stub aka Mock - Localhost REST Endpoints - GET POST PUT APIs",
+    "apis": [
+        {
+            "name": "get_regulatory_entry_details_mock",
+            "operation": "GET",
+            "url": "/api/v1/regulatory/bank-ids/CORPBANKUK0101",
+            "response": {
+                "status": 200,
+                "body": {
+                    "id": "CORPBANKUK0101",
+                    "login": "corp-bank-uk-london",
+                    "isActive": true
+                }
+            }
+        },
+        {
+            "name": "create_approved_loan_mock",
+            "operation": "POST",
+            "url": "/api/v1/corp-loan/companies/ABC-Jewels",
+            "ignoreBody": true,
+            "response": {
+                "status": 201,
+                "body": {
+                    "id": "LOANCORPABCJ-20180531"
+                }
+            }
+        },
+        {
+            "name": "get_approved_loan_mock",
+            "operation": "GET",
+            "url": "/api/v1/corp-loan/ids/LOANCORPABCJ-20180531",
+            "response": {
+                "status": 200,
+                "body": {
+                    "id": "LOANCORPABCJ-20180531",
+                    "amountApplied": 100000,
+                    "amountSanctioned": 90000,
+                    "currency": "USD",
+                    "dateSanctioned": "2018-05-31"
+                }
+            }
+        },
+        {
+            "name": "amend_existing_loan_mock",
+            "operation": "PUT",
+            "url": "/api/v1/corp-loan/companies/ABC-Jewels/LOANCORPABCJ-20180540",
+            "ignoreBody": true,
+            "response": {
+                "status": 200,
+                "body": {
+                    "id": "LOANCORPABCJ-20180540"
+                }
+            }
+        },
+        {
+            "name": "get_amended_loan_mock",
+            "operation": "GET",
+            "url": "/api/v1/corp-loan/ids/LOANCORPABCJ-20180540",
+            "response": {
+                "status": 200,
+                "body": {
+                    "id": "LOANCORPABCJ-20180540",
+                    "amountApplied": 100000,
+                    "amountSanctioned": 100000,
+                    "currency": "USD",
+                    "dateAmended": "2018-06-31",
+                    "dateSanctioned": "2018-05-31"
+                }
+            }
+        },
+        {
+            "name": "get_screening_status",
+            "operation": "GET",
+            "url": "/api/v1/screening/cust-ids/SINGAHV3033",
+            "response": {
+                "status": 200,
+                "body": {
+                    "id" : "SINGAHV3033",
+                    "localScreeningStatus" : "Green",
+                    "globalScreeningStatus" : "Red"
+                }
+            }
+        }
+
+    ]
+}

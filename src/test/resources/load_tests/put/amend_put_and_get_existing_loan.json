@@ -1,0 +1,44 @@
+{
+    "scenarioName": "Corp Loan API- Amend Existing Loan Test",
+    "steps": [
+        {
+            "name": "amend_existing_loan",
+            "url": "/api/v1/corp-loan/companies/ABC-Jewels/LOANCORPABCJ-20180540",
+            "operation": "PUT",
+            "request": {
+                "body":{
+                    "amountApplied": 100000,
+                    "amountSanctioned": 90000,
+                    "amountAmended": 10000,
+                    "currency": "USD",
+                    "dateAmended":"2018-06-31"
+                }
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "id" : "LOANCORPABCJ-20180540"
+                }
+            }
+        },
+        {
+            "name": "get_loan_details",
+            "url": "/api/v1/corp-loan/ids/LOANCORPABCJ-20180540",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body":{
+                    "id" : "LOANCORPABCJ-20180540",
+                    "amountApplied": 100000,
+                    "amountSanctioned": 100000,
+                    "currency": "USD",
+                    "dateAmended":"2018-06-31",
+                    "dateSanctioned":"2018-05-31"
+                }
+            }
+        }
+
+    ]
+}

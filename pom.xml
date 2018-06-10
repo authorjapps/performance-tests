@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.jsmart</groupId>
+	<artifactId>corp-bank-performance-tests</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>jar</packaging>
+	<name>Corp Bank Performance Tests</name>
+	<description>Performance testing(load and stress) of systems APIs</description>
+
+	<properties>
+		<zerocode-rest-bdd.version>1.2.1-SNAPSHOT</zerocode-rest-bdd.version>
+		<junit.version>4.12</junit.version>
+		<java.version>1.8</java.version>
+		<plugin.source.version>3.0.0</plugin.source.version>
+		<micro-simulator.version>1.1.8</micro-simulator.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jsmart</groupId>
+			<artifactId>zerocode-rest-bdd</artifactId>
+			<version>${zerocode-rest-bdd.version}</version>
+		</dependency>
+		<!--
+		The below is needed only for fake REST end point simulation.
+		You may not need it for real REST services as they will be
+		already deployed and running in your CI/DIT/SIT server.
+		-->
+		<dependency>
+			<groupId>org.jsmart</groupId>
+			<artifactId>micro-simulator</artifactId>
+			<version>${micro-simulator.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<includes>
+						<!--
+
+						Please start the fame REST server by running >>
+						org.jsmart.zerocode.restapimockserver.RunMeFirstMockApiServer
+						before firing any tests.
+						This is only for demo purpose, in reality you don't have to do this
+						as you will have your real API server running and you have to point
+						your tests to that(those) servers.
+
+						-->
+						<include>org.jsmart.zerocode.samples.load.LoadTestSuite.class</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${plugin.source.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

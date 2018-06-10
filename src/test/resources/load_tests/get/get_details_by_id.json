@@ -1,0 +1,21 @@
+{
+    "scenarioName": "Regulatory API- Get by ID test",
+    "steps": [
+        {
+            "name": "get_user_details",
+            "url": "/api/v1/regulatory/bank-ids/CORPBANKUK0101",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "id" : "CORPBANKUK0101",
+                    "login" : "corp-bank-uk-london",
+                    "isActive" : true
+                }
+            }
+        }
+
+    ]
+}
