@@ -1,7 +1,8 @@
-package org.jsmart.zerocode.samples.load.parallelmulti;
+package org.jsmart.zerocode.samples.load.samplejunit;
 
 import org.jsmart.zerocode.core.domain.LoadWith;
 import org.jsmart.zerocode.core.domain.TestMapping;
+import org.jsmart.zerocode.core.domain.TestMappings;
 import org.jsmart.zerocode.core.runner.parallel.ZeroCodeMultiLoadRunner;
 import org.jsmart.zerocode.samples.tests.get.GetScreeningServiceTest;
 import org.jsmart.zerocode.samples.tests.post.PostCorpLoanServiceTest;
@@ -28,17 +29,14 @@ import org.junit.runner.RunWith;
  * Please make sure you set "number.of.threads" >= "number of test mappings(= 3 here)" giving chance for
  * each scenario to get executed at least once.
  *
- * See (optionally) how to group the tests ?
- * -----------------------------------------
- * For pretty looking or better readability:
- * org.jsmart.zerocode.samples.load.samplejunit.LoadMultipleGroupAnnotationTest
- *
  */
 @LoadWith("load_generation.properties")
-@TestMapping(testClass = GetScreeningServiceTest.class, testMethod = "testGetScreeningLocalAndGlobal")
-@TestMapping(testClass = PostCorpLoanServiceTest.class, testMethod = "testPostNewLoan_crudOperations")
-@TestMapping(testClass = PutCorpLoanServiceTest.class, testMethod = "testPutAmendExistingLoan")
+@TestMappings({
+        @TestMapping(testClass = GetScreeningServiceTest.class, testMethod = "testGetScreeningLocalAndGlobal"),
+        @TestMapping(testClass = PostCorpLoanServiceTest.class, testMethod = "testPostNewLoan_crudOperations"),
+        @TestMapping(testClass = PutCorpLoanServiceTest.class, testMethod = "testPutAmendExistingLoan")
+})
 @RunWith(ZeroCodeMultiLoadRunner.class)
-public class LoadMultipleGetPostPutTest {
+public class LoadMultipleGroupAnnotationTest {
 
 }
