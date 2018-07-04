@@ -10,7 +10,6 @@ import org.junit.runner.RunWith;
 @RunWith(ZeroCodeUnitRunner.class)
 public class GetScreeningServiceTest {
 
-
     @Test
     @JsonTestCase("load_tests/get/get_screening_details_by_custid.json")
     public void testGetScreeningLocalAndGlobal() throws Exception {
