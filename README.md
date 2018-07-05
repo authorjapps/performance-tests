@@ -151,4 +151,17 @@ public class LoadGraduallyTestSuite {
 
 }
 ```
-+ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) this project to run using your local IDE
+
+Maven library used
+===
++ Latest release:
+```
+<dependency>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-rest-bdd</artifactId>
+    <version>1.2.x</version> 
+</dependency>
+```
++ Check here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
+
