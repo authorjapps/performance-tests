@@ -1,5 +1,5 @@
 # Performance testing (Testing load and stress)
-Sample Performance Tests - Banking
+Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework)
 
 ![Prepare Scenario](help_images/load_tests_L.png)
 
