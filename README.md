@@ -14,11 +14,12 @@ public class LoadGetTest {
 
 }
 ```
-Where, the `load_generation.properties` has the below load e.g.
+Where, the `load_generation.properties` has the below load e.g. </br>
+(100 requests in 100secs i.e. each request in 1 sec gap, looping twice, meaning 200 parallel requests)
 ```properties
-number.of.threads=3
-ramp.up.period.in.seconds=3
-loop.count=1
+number.of.threads=100
+ramp.up.period.in.seconds=100
+loop.count=2
 ```
 
 It generates load for the below GET scenario:
@@ -30,9 +31,7 @@ public class GetScreeningServiceTest {
     @Test
     @JsonTestCase("load_tests/get/get_screening_details_by_custid.json")
     public void testGetScreeningLocalAndGlobal() throws Exception {
-
     }
-
 }
 ```
 
