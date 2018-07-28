@@ -1,5 +1,5 @@
 # Performance testing (Testing load and stress)
-Sample Performance Tests - Banking
+Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework)
 
 ![Prepare Scenario](help_images/load_tests_L.png)
 
@@ -14,11 +14,12 @@ public class LoadGetTest {
 
 }
 ```
-Where, the `load_generation.properties` has the below load e.g.
+Where, the `load_generation.properties` has the below load e.g. </br>
+(100 requests in 100secs i.e. each request in 1 sec gap, looping twice, meaning 200 parallel requests)
 ```properties
-number.of.threads=3
-ramp.up.period.in.seconds=3
-loop.count=1
+number.of.threads=100
+ramp.up.period.in.seconds=100
+loop.count=2
 ```
 
 It generates load for the below GET scenario:
@@ -30,9 +31,7 @@ public class GetScreeningServiceTest {
     @Test
     @JsonTestCase("load_tests/get/get_screening_details_by_custid.json")
     public void testGetScreeningLocalAndGlobal() throws Exception {
-
     }
-
 }
 ```
 
@@ -151,4 +150,17 @@ public class LoadGraduallyTestSuite {
 
 }
 ```
-+ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) or [browse](https://github.com/authorjapps/performance-tests) in the repo
++ [Download](https://github.com/authorjapps/performance-tests/archive/master.zip) this project to run using your local IDE
+
+Maven library used
+===
++ Latest release:
+```
+<dependency>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-rest-bdd</artifactId>
+    <version>1.2.x</version> 
+</dependency>
+```
++ Check here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
+
