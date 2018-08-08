@@ -1,4 +1,4 @@
-package org.jsmart.zerocode.samples.load.samplejunit;
+package org.jsmart.zerocode.samples.load.samplemore;
 
 import org.jsmart.zerocode.core.domain.LoadWith;
 import org.jsmart.zerocode.core.domain.TestMapping;

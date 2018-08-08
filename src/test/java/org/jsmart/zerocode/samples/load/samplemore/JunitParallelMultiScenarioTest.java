@@ -1,4 +1,4 @@
-package org.jsmart.zerocode.samples.load.samplejunit;
+package org.jsmart.zerocode.samples.load.samplemore;
 
 import org.jsmart.zerocode.core.domain.LoadWith;
 import org.jsmart.zerocode.core.domain.TestMapping;
@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
  * You can keep feeding/adding as many tests by using @TestMapping(TestClassName.class, "testMethodName")
  *
  * Please set "number.of.threads" >= "number of test mappings(= 3 here in this example)" giving chance for
- * each user scenario to get executed at least once. It's not illegal to set less.
+ * each user scenario to get executed at least once. It's not illegal too, to set less "number.of.threads".
  *
  * If you set more(e.g. number.of.threads=6 or 9, 10 in this case), then the user scenarios will get executed
  * more and more times in parallel until all the threads are used up.

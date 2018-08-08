@@ -31,7 +31,7 @@ import org.junit.runner.RunWith;
  * See (optionally) how to group the tests ?
  * -----------------------------------------
  * For pretty looking or better readability:
- * org.jsmart.zerocode.samples.load.samplejunit.LoadMultipleGroupAnnotationTest
+ * org.jsmart.zerocode.samples.load.samplemore.LoadMultipleGroupAnnotationTest
  *
  */
 @LoadWith("load_generation.properties")
