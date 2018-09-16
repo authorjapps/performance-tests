@@ -1,5 +1,23 @@
 # Performance testing (Testing load and stress)
+
 Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework)
+
+#### Needed maven dependencies
+```xml
+<dependency>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-rest-bdd</artifactId>
+    <version>1.2.x</version> 
+</dependency>
+```
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+```
 
 ![Prepare Scenario](help_images/load_tests_L.png)
 
