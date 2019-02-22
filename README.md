@@ -172,13 +172,14 @@ public class LoadGraduallyTestSuite {
 
 Maven library used
 ===
-+ Latest release:
++ Latest release (includes Kafka testing):
 ```
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.2.x</version> 
+    <version>1.3.x</version> 
 </dependency>
 ```
-+ Check here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
++ Visit here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
++ Or check here at [zerocode maven-and-ci](https://github.com/authorjapps/zerocode/blob/master/README.md#maven-and-ci-)
 
