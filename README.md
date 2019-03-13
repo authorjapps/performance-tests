@@ -18,7 +18,7 @@ Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
-    <artifactId>zerocode-tdd</artifactId>
+    <artifactId>zerocode-rest-bdd</artifactId>
     <version>1.2.x</version> 
 </dependency>
 ```
