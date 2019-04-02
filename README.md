@@ -1,5 +1,35 @@
+> _Visit here for a quick read about the essence of [performance-testing](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#in-essence-the-performance-testing-is-all-about-) before we actually generate load or stress_
+
+## Table of Contents
+* [Performance testing (Testing load and stress)](#performance-testing-testing-load-and-stress)
+    * [Needed maven dependencies](#needed-maven-dependencies)
+* [Single scenario parallel load](#single-scenario-parallel-load)
+* [Combining single loads(GET, POST, PUT etc)](#combining-single-loadsget-post-put-etc)
+* [Multi scenario parallel load](#multi-scenario-parallel-load)
+    * [Grouping the multiload tests(Optional)](#optionallygrouping-the-multiload-tests)
+* [Load with gradually increasing or decreasing](#load-with-gradually-increasing-or-decreasing)
+* [Maven library used](#maven-library-used)
+
 # Performance testing (Testing load and stress)
+
 Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework)
+
+#### Needed maven dependencies
+```xml
+<dependency>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-rest-bdd</artifactId>
+    <version>1.2.x</version> 
+</dependency>
+```
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+```
 
 ![Prepare Scenario](help_images/load_tests_L.png)
 
@@ -154,13 +184,15 @@ public class LoadGraduallyTestSuite {
 
 Maven library used
 ===
-+ Latest release:
++ Latest release (includes Kafka testing):
 ```
 <dependency>
     <groupId>org.jsmart</groupId>
-    <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.2.x</version> 
+    <artifactId>zerocode-tdd</artifactId>
+    <version>1.3.x</version> 
 </dependency>
 ```
-+ Check here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
++ Visit here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-tdd)
++ Or check here at [zerocode maven-and-ci](https://github.com/authorjapps/zerocode/blob/master/README.md#maven-and-ci-)
++ Visit here for the earlier releases [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
 
