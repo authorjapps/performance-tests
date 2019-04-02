@@ -18,6 +18,12 @@ import static org.hamcrest.core.Is.is;
 @RunWith(ZeroCodeUnitRunner.class)
 public class JunitExistingRestTest {
 
+    /**
+     * This test sometimes failed due to GitHub rate limiting settings.
+     * The failures should be captured in the reports(CSV and html).
+     * This is knowing kept here to test the rate limiting and show
+     * how a failed test can be tracked in the log/reports
+     */
     @Test
     public void testGitHubGetApi() throws IOException, InterruptedException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
