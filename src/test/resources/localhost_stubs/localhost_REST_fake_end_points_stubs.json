@@ -70,7 +70,7 @@
             }
         },
         {
-            "name": "get_screening_status",
+            "name": "get_screening_status_id1",
             "operation": "GET",
             "url": "/api/v1/screening/cust-ids/SINGAHV3033",
             "response": {
@@ -81,7 +81,19 @@
                     "globalScreeningStatus" : "Red"
                 }
             }
+        },
+        {
+            "name": "get_screening_status_id2",
+            "operation": "GET",
+            "url": "/api/v1/screening/cust-ids/SINGAHV3034",
+            "response": {
+                "status": 200,
+                "body": {
+                    "id" : "SINGAHV3034",
+                    "localScreeningStatus" : "Amber",
+                    "globalScreeningStatus" : "Amber"
+                }
+            }
         }
-
     ]
 }

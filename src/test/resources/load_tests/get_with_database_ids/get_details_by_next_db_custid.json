@@ -1,0 +1,26 @@
+{
+    "scenarioName": "Screening API- Get Screening by Next customerId from DB",
+    "steps": [
+        {
+            "name": "get_next_id",
+            "url": "org.jsmart.zerocode.utils.DbIdPicker",
+            "operation": "nextId",
+            "request": "",
+            "assertions": {
+            }
+        },
+        {
+            "name": "get_screening_details",
+            "url": "/api/v1/screening/cust-ids/${$.get_next_id.response}",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "id": "${$.get_next_id.response}"
+                }
+            }
+        }
+    ]
+}
