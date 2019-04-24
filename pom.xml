@@ -14,24 +14,29 @@
 	<description>Performance testing(load and stress) of systems APIs</description>
 
 	<properties>
-		<zerocode-rest-bdd.version>1.2.6</zerocode-rest-bdd.version>
-		<junit.version>4.12</junit.version>
+		<zerocode-tdd.version>1.3.5</zerocode-tdd.version>
 		<java.version>1.8</java.version>
 		<plugin.source.version>3.0.0</plugin.source.version>
 		<micro-simulator.version>1.1.8</micro-simulator.version>
+		<junit.jupiter.version>5.4.1</junit.jupiter.version>
+		<junit.vintage.version>5.4.1</junit.vintage.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>compile</scope>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit.jupiter.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>${junit.vintage.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jsmart</groupId>
-			<artifactId>zerocode-rest-bdd</artifactId>
-			<version>${zerocode-rest-bdd.version}</version>
+			<artifactId>zerocode-tdd</artifactId>
+			<version>${zerocode-tdd.version}</version>
 		</dependency>
 		<!--
 		The below is needed only for fake REST end point simulation.

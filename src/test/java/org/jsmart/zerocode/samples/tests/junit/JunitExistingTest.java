@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-//@RunWith(ZeroCodeUnitRunner.class) //<--- Enable this for reports only. Otherwise not needed.
+@RunWith(ZeroCodeUnitRunner.class) //<--- Enable this for reports only. Otherwise not needed.
 public class JunitExistingTest {
     static int a = 2;
     static int b = 3;
