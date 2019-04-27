@@ -9,18 +9,12 @@ import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith({ExtensionA.class, ExtensionB.class})
-public class JUnit5Test {
+public class JUnit5MoreTest {
 
     @Test
-    public void testX() {
-        out.println("*JUnit5 ---> testX()");
-        assertTrue(2 == 2); //jupiter assertion
-    }
-
-    @Test
-    public void testY() throws InterruptedException {
-        Thread.sleep(500);
-        out.println("*JUnit5 ---> testY()");
+    public void testZ() throws InterruptedException {
+        Thread.sleep(1000);
+        out.println("*JUnit5 ---> testZ()");
         assertTrue(2 == 2); //jupiter assertion
     }
 
