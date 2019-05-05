@@ -14,7 +14,7 @@
 	<description>Performance testing(load and stress) of systems APIs</description>
 
 	<properties>
-		<zerocode-tdd.version>1.3.7-SNAPSHOT</zerocode-tdd.version>
+		<zerocode-tdd.version>1.3.7</zerocode-tdd.version>
 		<junit.version>4.12</junit.version>
 		<java.version>1.8</java.version>
 		<plugin.source.version>3.0.0</plugin.source.version>

@@ -3,7 +3,7 @@ package org.jsmart.zerocode.samplesjunit5.loadjupiter.differentload;
 import org.jsmart.zerocode.core.domain.LoadWith;
 import org.jsmart.zerocode.core.domain.TestMapping;
 import org.jsmart.zerocode.core.domain.TestMappings;
-import org.jsmart.zerocode.jupiter.extension.ZeroCodeParallelExtension;
+import org.jsmart.zerocode.jupiter.extension.ParallelLoadExtension;
 import org.jsmart.zerocode.samplesjunit5.jupiter.JUnit5MoreTest;
 import org.jsmart.zerocode.samplesjunit5.jupiter.JUnit5Test;
 import org.junit.jupiter.api.DisplayName;
@@ -27,7 +27,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
  * This is usual behaviour of the Test-Suite run. This is setup as a Suite setup,
  * which means you don't need another Suite-Runner to
  */
-@ExtendWith({ZeroCodeParallelExtension.class})
+@ExtendWith({ParallelLoadExtension.class})
 public class JUnit5LoadDifferentLoadTest {
 
     @Test
