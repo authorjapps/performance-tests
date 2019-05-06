@@ -2,7 +2,8 @@
 
 ## Table of Contents
 * [Performance testing (Testing load and stress)](#performance-testing-testing-load-and-stress)
-    * [Needed maven dependencies](#needed-maven-dependencies)
+    * [Maven dependencies - JUnit5 Jupiter](#maven-dependencies---junit5-jupiter-tests)
+    * [Needed maven dependencies - JUnit4](#maven-dependencies)
 * [Single scenario parallel load](#single-scenario-parallel-load)
 * [Combining single loads(GET, POST, PUT etc)](#combining-single-loadsget-post-put-etc)
 * [Multi scenario parallel load](#multi-scenario-parallel-load)
@@ -14,20 +15,24 @@
 
 Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework)
 
-#### Needed maven dependencies
+#### Maven dependencies - JUnit5 Jupiter Tests
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
-    <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.2.x</version> 
+    <artifactId>zerocode-tdd-jupiter</artifactId>
+    <version>1.3.7</version> <!-- or higher -->
 </dependency>
 ```
+Then follow this [WikiPage](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension).
+
+For JUnit4 parallel-run or load testing, follow the below sections.
+
+#### Maven dependencies
 ```xml
 <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.12</version>
-    <scope>test</scope>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-tdd</artifactId>
+    <version>1.3.7</version> 
 </dependency>
 ```
 
