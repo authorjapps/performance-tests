@@ -3,7 +3,7 @@
 ## Table of Contents
 * [Performance testing (Testing load and stress)](#performance-testing-testing-load-and-stress)
     * [Maven dependencies - JUnit5 Jupiter](#maven-dependencies---junit5-jupiter-tests)
-    * [Needed maven dependencies - JUnit4](#maven-dependencies)
+    * [Needed maven dependencies - JUnit4](#maven-dependencies---junit4)
 * [Single scenario parallel load](#single-scenario-parallel-load)
 * [Combining single loads(GET, POST, PUT etc)](#combining-single-loadsget-post-put-etc)
 * [Multi scenario parallel load](#multi-scenario-parallel-load)
@@ -25,9 +25,9 @@ Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/
 ```
 Then follow this [WikiPage](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension).
 
-For JUnit4 parallel-run or load testing, follow the below sections.
+For **JUnit4** parallel-run or load testing, follow the samples in the below sections.
 
-#### Maven dependencies
+#### Maven dependencies - JUnit4
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
