@@ -1,6 +1,7 @@
 > _Visit here for a quick read about the essence of [performance-testing](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#in-essence-the-performance-testing-is-all-about-) before we actually generate load or stress_
 
 ## Table of Contents
+* [Introduction and Quick Overview](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#in-essence-the-performance-testing-is-all-about-)
 * [Performance testing (Testing load and stress)](#performance-testing-testing-load-and-stress)
     * [Maven dependencies - JUnit5 Jupiter](#maven-dependencies---junit5-jupiter-tests)
     * [Needed maven dependencies - JUnit4](#maven-dependencies---junit4)
@@ -10,6 +11,7 @@
     * [Grouping the multiload tests(Optional)](#optionallygrouping-the-multiload-tests)
 * [Load with gradually increasing or decreasing](#load-with-gradually-increasing-or-decreasing)
 * [Maven library used](#maven-library-used)
+* [Disbaling long-running HTML reports]()
 
 # Performance testing (Testing load and stress)
 
@@ -200,4 +202,15 @@ Maven library used
 + Visit here for the latest in [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-tdd)
 + Or check here at [zerocode maven-and-ci](https://github.com/authorjapps/zerocode/blob/master/README.md#maven-and-ci-)
 + Visit here for the earlier releases [Maven Central](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
+
+Disabling long-running HTML Reports
+===
+
+The Interactive-Html-Report generation is enabled by default. For load testing this report may not be quite useful as we are mostly interested in load statistics which we can get from the CSV reports. Also the HTML interactive reports particularly takes bit longer to generate during load testing.
+
+To disable this report generation please use the following flag in the host properties file annotated with `@TargetEnv("app_host_sit.properties")`.
+
+```properties
+interactive.html.report.disabled=true
+```
 
