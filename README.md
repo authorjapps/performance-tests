@@ -3,10 +3,10 @@
 ## Table of Contents
 * [Introduction and Quick Overview](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#in-essence-the-performance-testing-is-all-about-)
 * [Performance testing (Testing load and stress)](#performance-testing-testing-load-and-stress)
-    * [Maven dependencies - JUnit5 Jupiter](#maven-dependencies---junit5-jupiter-tests)
-    * [Needed maven dependencies - JUnit4](#maven-dependencies---junit4)
-* [Single scenario parallel load](#single-scenario-parallel-load)
-* [Combining single loads(GET, POST, PUT etc)](#combining-single-loadsget-post-put-etc)
+    * [Using - JUnit5 Jupiter](#maven-dependencies---junit5-jupiter-tests)
+    * [Using - JUnit4](#maven-dependencies---junit4)
+* [One user-journey parallel load](#single-scenario-parallel-load)
+* [Combining single user-journeys(GET, POST, PUT etc)](#combining-single-loadsget-post-put-etc)
 * [Multi scenario parallel load](#multi-scenario-parallel-load)
     * [Grouping the multiload tests(Optional)](#optionallygrouping-the-multiload-tests)
 * [Load with gradually increasing or decreasing](#load-with-gradually-increasing-or-decreasing)
@@ -72,7 +72,7 @@ public class GetScreeningServiceTest {
 }
 ```
 
-Where the `get_screening_details_by_custid.json` with payload and assertions :
+Where the `get_screening_details_by_custid.json` with payload and assertions/validations :
 ```
 {
     "scenarioName": "Screening API- Get Screening by customerId test",
@@ -80,10 +80,10 @@ Where the `get_screening_details_by_custid.json` with payload and assertions :
         {
             "name": "get_screening_details",
             "url": "/api/v1/screening/cust-ids/SINGAHV3033",
-            "operation": "GET",
+            "method": "GET",
             "request": {
             },
-            "assertions": {
+            "verify": {
                 "status": 200,
                 "body": {
                     "id" : "SINGAHV3033",
