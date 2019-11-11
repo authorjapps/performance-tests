@@ -14,7 +14,7 @@
 	<description>Performance testing(load and stress) of systems APIs</description>
 
 	<properties>
-		<zerocode-tdd.version>1.3.7</zerocode-tdd.version>
+		<zerocode-tdd.version>1.3.16</zerocode-tdd.version>
 		<junit.version>4.12</junit.version>
 		<java.version>1.8</java.version>
 		<plugin.source.version>3.0.0</plugin.source.version>
@@ -67,19 +67,10 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<includes>
-						<!--
-
-						Please start the fame REST server by running >>
-						org.jsmart.zerocode.restapimockserver.RunMeFirstMockApiServer
-						before firing any tests.
-						This is only for demo purpose, in reality you don't have to do this
-						as you will have your real API server running and you have to point
-						your tests to that(those) servers.
-
-						-->
-						<include>org.jsmart.zerocode.samples.load.LoadTestSuite.class</include>
-						<include>org.jsmart.zerocode.samplesjunit5.loadjupiter.simpleload.JUnit5LoadTest</include>
+						<include>org.jsmart.zerocode.samples.tests.TestSuite</include>
 					</includes>
+					<parallel>classes</parallel>
+					<!--<parallel>methods</parallel>--> <!-- Or use methods -->
 				</configuration>
 			</plugin>
 			<plugin>
