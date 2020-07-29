@@ -22,7 +22,7 @@ Sample Performance Tests - Banking (Using [JUnit](https://github.com/junit-team/
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-tdd-jupiter</artifactId>
-    <version>1.3.7</version> <!-- or higher -->
+    <version>1.3.23</version> <!-- or higher -->
 </dependency>
 ```
 Then follow this [WikiPage](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension).
@@ -34,7 +34,7 @@ For **JUnit4** parallel-run or load testing, follow the samples in the below sec
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-tdd</artifactId>
-    <version>1.3.7</version> 
+    <version>1.3.23</version> 
 </dependency>
 ```
 
