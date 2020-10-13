@@ -1,4 +1,4 @@
-> _Visit here for a quick read about the essence of [performance-testing](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#in-essence-the-performance-testing-is-all-about-) before we actually generate load or stress_
+Visit our [Knowledge Base](https://knowledge.zerocode.io/knowledge/load-or-performance-testing-ide-based) to learn about load/stress testing and [IDE based performance testing](https://knowledge.zerocode.io/knowledge/load-or-performance-testing-ide-based).
 
 ## Table of Contents
 * [Introduction and Quick Overview](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#in-essence-the-performance-testing-is-all-about-)
